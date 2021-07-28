@@ -8,7 +8,7 @@
   /* Neutral */
 
   --Very--dark--cyan: hsl(183, 100%, 15%);
-  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Darker-grayish-cyan: hsl(186, 14%, 43%);
   --Dark-grayish-cyan: hsl(184, 14%, 56%);
   --grayish-cyan: hsl(185, 41%, 84%);
   --Light-grayish-cyan: hsl(189, 41%, 97%);
@@ -23,8 +23,168 @@
 }
 
 body {
+  background-color: var(--grayish-cyan);
+  /* padding: 5rem; */
+  height: 100%;
+  font-size: 16px;
   font-family: var(--ff-space-mono);
 }
+
+header {
+  color: var(--Very--dark--cyan);
+  font-weight: 400;
+  height: 150px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  color: var(--White);
+  font-family: var(--ff-space-mono);
+  font-weight: 500;
+}
+h1 {
+  width: 6ch;
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+  word-wrap: break-word;
+  text-transform: uppercase;
+}
+
+span {
+  color: var(--Strong--cyan);
+  font-size: 1.5rem;
+}
+label {
+  color: var(--Darker-grayish-cyan);
+  font-weight: 700;
+}
+input {
+  color: var(--Very--dark--cyan);
+  font-size: 1.3rem;
+  background-color: var(--Light-grayish-cyan);
+  border: none;
+  height: 40px;
+  text-align: center;
+  width: 100%;
+}
+
+icon-input img {
+  float: left;
+}
+#bill {
+  background-image: url("./images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position-x: 0.5rem;
+}
+#people {
+  background-image: url("./images/icon-person.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position-x: 0.5rem;
+}
+
+button {
+  text-decoration: none;
+  border: none;
+  background-color: var(--Very--dark--cyan);
+}
 main {
+  /* padding: 0 3rem; */
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.calculator-wrapper {
+  background-color: var(--White);
+  height: 100%;
+  width: 100%;
+  /* max-width: 1000px; */
+  border-radius: 1.5rem;
+  padding: 2rem 2rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 770px;
+}
+
+.tip-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  max-width: 770px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tip-percent {
+  padding: 0.7rem 0;
+  min-width: 100px;
+  color: var(--White);
+  font-family: var(--ff-space-mono);
+  font-weight: 600;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+}
+
+.tip-percent:hover {
   background-color: var(--Strong--cyan);
+}
+
+/* Total container content */
+
+.total-container {
+  background-color: var(--Very--dark--cyan);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  height: 100%;
+  width: 100%;
+  max-width: 400px;
+  max-height: 1000px;
+  position: relative;
+  border-radius: 1rem;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+.reset-btn {
+  background-color: var(--Strong--cyan);
+  margin: 0 auto;
+  border: 1rem;
+  margin-top: 1rem;
+  height: 50px;
+  border-radius: 0.4rem;
+  width: 100%;
+  font-family: var(--ff-space-mono);
+  text-transform: uppercase;
+  color: var(--Very--dark--cyan);
+  font-weight: 700;
+}
+.amount-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+p::after {
+  content: "/ person";
+  color: var(--Dark-grayish-cyan);
+  font-size: 0.8rem;
+  font-weight: 400;
+  position: absolute;
+  bottom: -10%;
+  left: 0;
+  width: 100px;
+  height: 10px;
 }
