@@ -21,6 +21,17 @@
   box-sizing: border-box;
   margin: 0;
 }
+/* Remove arrows from type number of input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/* ============================================== */
 
 body {
   background-color: var(--grayish-cyan);
@@ -69,6 +80,16 @@ input {
   height: 40px;
   text-align: center;
   width: 100%;
+  border-radius: 0.5rem;
+  height: 100%;
+  font-family: var(--ff-space-mono);
+  text-align: right;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+input:focus {
+  outline-color: var(--Strong--cyan);
 }
 
 icon-input img {
@@ -117,6 +138,10 @@ main {
   max-width: 770px;
 }
 
+#tipPercent {
+  font-weight: 700;
+  text-align: center;
+}
 .tip-area {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -138,6 +163,7 @@ main {
 
 .tip-percent:hover {
   background-color: var(--Strong--cyan);
+  opacity: 0.5;
 }
 
 /* Total container content */
@@ -148,10 +174,8 @@ main {
   flex-direction: column;
   gap: 1.5rem;
   padding: 2rem;
-  height: 100%;
   width: 100%;
   max-width: 400px;
-  max-height: 1000px;
   position: relative;
   border-radius: 1rem;
   margin: 0 auto;
@@ -171,6 +195,15 @@ main {
   color: var(--Very--dark--cyan);
   font-weight: 700;
 }
+.reset-btn:hover {
+  background-color: var(--grayish-cyan);
+}
+
+.btn-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
 .amount-container {
   display: flex;
   justify-content: space-between;
@@ -187,4 +220,32 @@ p::after {
   left: 0;
   width: 100px;
   height: 10px;
+}
+
+@media (min-width: 800px) {
+  .calculator-wrapper {
+    display: flex;
+    gap: 4rem;
+    width: 1000px;
+  }
+
+  .input-container {
+    width: 45%;
+  }
+  .total-container {
+    margin: 0;
+    max-height: 1000px;
+    font-size: 1.3rem;
+  }
+
+  .total-number {
+    font-size: 2.3rem;
+  }
+  .tip-area {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  body {
+    padding: 6rem 10rem;
+  }
 }
