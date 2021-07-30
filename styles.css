@@ -163,7 +163,7 @@ main {
 
 .tip-percent:hover {
   background-color: var(--Strong--cyan);
-  opacity: 0.5;
+  color: black;
 }
 
 /* Total container content */
@@ -175,7 +175,7 @@ main {
   gap: 1.5rem;
   padding: 2rem;
   width: 100%;
-  max-width: 400px;
+
   position: relative;
   border-radius: 1rem;
   margin: 0 auto;
@@ -225,8 +225,8 @@ p::after {
 @media (min-width: 800px) {
   .calculator-wrapper {
     display: flex;
-    gap: 4rem;
-    width: 1000px;
+    gap: 10rem;
+    width: 1500px;
   }
 
   .input-container {
@@ -240,12 +240,16 @@ p::after {
 
   .total-number {
     font-size: 2.3rem;
+    margin-left: 5rem;
   }
   .tip-area {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  body {
-    padding: 6rem 10rem;
+  main {
+    padding: 5rem 15rem;
   }
+  /* body {
+    padding: 5rem 15rem;
+  } */
 }
