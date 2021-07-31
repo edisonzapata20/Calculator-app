@@ -33,6 +33,12 @@ input[type="number"] {
 }
 /* ============================================== */
 
+.attribution {
+  text-align: center;
+  font-family: var(--ff-space-mono);
+  margin-top: 1.5rem;
+}
+
 body {
   background-color: var(--grayish-cyan);
   /* padding: 5rem; */
