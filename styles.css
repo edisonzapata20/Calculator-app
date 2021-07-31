@@ -19,8 +19,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
 }
+
 /* Remove arrows from type number of input */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -36,8 +36,9 @@ input[type="number"] {
 body {
   background-color: var(--grayish-cyan);
   /* padding: 5rem; */
-  height: 100%;
-  font-size: 16px;
+  /* height: 100%; */
+  margin: 0;
+  font-size: 1rem;
   font-family: var(--ff-space-mono);
 }
 
@@ -67,6 +68,7 @@ h1 {
 span {
   color: var(--Strong--cyan);
   font-size: 1.5rem;
+  font-weight: 700;
 }
 label {
   color: var(--Darker-grayish-cyan);
@@ -89,12 +91,15 @@ input {
 }
 
 input:focus {
+  font-weight: 700;
   outline-color: var(--Strong--cyan);
+  color: var(--Very--dark--cyan);
 }
 
 icon-input img {
   float: left;
 }
+
 #bill {
   background-image: url("./images/icon-dollar.svg");
   background-repeat: no-repeat;
@@ -207,6 +212,7 @@ main {
 .amount-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: relative;
 }
 
@@ -221,12 +227,20 @@ p::after {
   width: 100px;
   height: 10px;
 }
+@media (max-width: 280px) {
+  .calculator-wrapper {
+    padding: 1rem;
+  }
+  .total-container {
+    padding: 0.8rem;
+  }
+}
 
 @media (min-width: 800px) {
   .calculator-wrapper {
     display: flex;
-    gap: 10rem;
-    width: 1500px;
+    gap: 5rem;
+    width: 1050px;
   }
 
   .input-container {
@@ -236,18 +250,26 @@ p::after {
     margin: 0;
     max-height: 1000px;
     font-size: 1.3rem;
+    max-width: 100vw;
   }
 
   .total-number {
     font-size: 2.3rem;
-    margin-left: 5rem;
+  }
+
+  .amount-wrapper {
+    font-size: 0;
+    display: flex;
+  }
+  .amount-wrapper span {
+    font-size: 2.3rem;
   }
   .tip-area {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
   main {
-    padding: 5rem 15rem;
+    padding: 2rem 15rem;
   }
   /* body {
     padding: 5rem 15rem;
