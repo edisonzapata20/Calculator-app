@@ -35,23 +35,6 @@ let addAmount = (e) => {
 };
 bill.addEventListener("input", addAmount);
 
-// else if (currentTip == 0 && currentPeople == 0) {
-//   totalAmount.textContent = e.target.value;
-//   currentBill = e.target.value;
-//   // console.log(Math.round(parseFloat(e.target.value) * 100) / 100);
-// } else if (currentPeople > 0) {
-//   totalAmount.textContent =
-//     (parseFloat(e.target.value) + parseFloat(currentTip)) / currentPeople;
-//   tipAmount.textContent = parseFloat(currentTip) / currentPeople;
-//   currentBill = e.target.value;
-// } else {
-//   totalAmount.textContent =
-//     parseFloat(e.target.value) + parseFloat(currentTip);
-//   tipAmount.textContent =
-//     parseFloat(e.target.value) * parseFloat(currentTip / 100);
-//   currentBill = e.target.value;
-// }
-
 //Function to clear input field//
 function clearInput(e) {
   e.target.value = "";
@@ -91,7 +74,6 @@ tipPercents.forEach((button) => {
 
 // ============Function to calculate the tip custom amount ==============//
 
-///ME QUEDE AQUI/////
 function customTipCalculation(e) {
   currentTip = e.target.value / 100;
 
@@ -139,7 +121,6 @@ function peopleCalculation(e) {
     );
   }
 }
-// Math.round(parseFloat(currentTip) * 100) / 100
 
 numberPeople.addEventListener("input", peopleCalculation);
 
